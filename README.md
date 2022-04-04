@@ -1,4 +1,5 @@
 CS 3773 Project
+Based on the FreeCodeCamp django+vue tutorial
 
 ## RUNNING LOCALLY ##
 
