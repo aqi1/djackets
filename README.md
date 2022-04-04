@@ -7,13 +7,13 @@ Prerequisites:
 - NodeJS / npm
 - In the djackets folder, run "python -m venv .venv" to make a virtual environment
 
-# Starting the Django server #
+### Starting the Django server ###
 
 - start powershell
 - activate the virtual environment by running "activate.ps1" in djackets/.venv/scripts/ 
 - start the server by running "python manage.py runserver" in djackets/djackets_django/
 
-# Starting the Vue server #
+### Starting the Vue server ###
 
 - start powershell again (new instance)
 - activate the virtual environment by running djackets/.venv/scripts/activate.ps1 
