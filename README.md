@@ -7,18 +7,35 @@ Based on the FreeCodeCamp django+vue tutorial
 Prerequisites:
 - Python 3.x
 - NodeJS / npm
-- In the djackets folder, run "python -m venv .venv" to make a virtual environment
+- Virtual environment (see next section)
+
+### Set up virtual environment ###
+- Start powershell
+- In the djackets folder, run this to make a virtual environment:
+```
+python -m venv .venv
+```
+- Activate the virtual environment by running "activate.ps1" in .venv/scripts/ 
+- Run the following commands in sequence:
+```
+pip install django
+pip install django-rest-framework
+pip install django-cors-headers
+pip install djoser
+pip install pillow
+```
+- Close powershell
 
 ### Starting the Django server ###
 
-- start powershell
-- activate the virtual environment by running "activate.ps1" in djackets/.venv/scripts/ 
-- start the server by running "python manage.py runserver" in djackets/djackets_django/
+- Start powershell
+- Activate the virtual environment by running "activate.ps1" in .venv/scripts/ 
+- Start the server by running "python manage.py runserver" in djackets_django/
 
 ### Starting the Vue server ###
 
-- start powershell again (new instance)
-- activate the virtual environment by running "activate.ps1" in djackets/.venv/scripts/
-- start the server running "npm run serve" in djackets/djackets_vue/
+- Start powershell again (new instance)
+- Activate the virtual environment by running "activate.ps1" in .venv/scripts/
+- Start the server running "npm run serve" in djackets_vue/
 
 Go to localhost:8080 for the customer-facing web page or localhost:8000/admin for the administrative page (superuser login is admin//deanza)
