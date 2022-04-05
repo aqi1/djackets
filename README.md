@@ -11,29 +11,35 @@ Prerequisites:
 
 ### Set up virtual environment ###
 - Start powershell
+- Copy the requirements.txt to the djackets folder
 - In the djackets folder, run this to make a virtual environment:
 ```
 python -m venv .venv
 ```
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/ 
-- Run the following commands in sequence:
+- Run the following command to install all dependencies listed in requirements.txt
 ```
-pip install django
-pip install django-rest-framework
-pip install django-cors-headers
-pip install djoser
-pip install pillow
+pip install -r path/to/requirements.txt
 ```
 - Close powershell
 
-### Starting the Django server ###
+### Set up Vue stuff ###
+- Start powershell
+- Activate the virtual environment by running "activate.ps1" in .venv/scripts/
+- Run the following commands:
+```
+npm install -g @vue/cli
+cd djackets_vue
+npm install axios
+npm install bulma
+```
 
+### Starting the Django server ###
 - Start powershell
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/ 
 - Start the server by running "python manage.py runserver" in djackets_django/
 
 ### Starting the Vue server ###
-
 - Start powershell again (new instance)
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/
 - Start the server running "npm run serve" in djackets_vue/
