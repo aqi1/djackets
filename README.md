@@ -21,7 +21,6 @@ python -m venv .venv
 ```
 pip install -r path/to/requirements.txt
 ```
-- Close powershell
 
 ### Set up Vue stuff ###
 - Start powershell
