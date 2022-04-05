@@ -19,7 +19,7 @@ python -m venv .venv
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/ 
 - Run the following command to install all dependencies listed in requirements.txt
 ```
-pip install -r path/to/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Set up Vue stuff ###
