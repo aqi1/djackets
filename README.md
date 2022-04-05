@@ -9,7 +9,7 @@ Prerequisites:
 - NodeJS / npm
 - Virtual environment (see next section)
 
-### Set up virtual environment ###
+### Set up virtual environment and Django stuff ###
 - Start powershell
 - Copy the requirements.txt to the djackets folder
 - In the djackets folder, run this to make a virtual environment:
