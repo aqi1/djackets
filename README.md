@@ -32,7 +32,7 @@ cd djackets_vue
 npm install axios
 npm install bulma
 ```
-- (The first command installs vue/cli globally. The second changes directory to djackets_vue. The third and fourth install axios and bulma locally to the current folder)
+(The first command installs vue/cli globally. The second changes directory to djackets_vue. The third and fourth install axios and bulma locally to the current folder)
 
 ### Starting the Django server ###
 - Start powershell
