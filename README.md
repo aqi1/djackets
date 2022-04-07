@@ -25,14 +25,12 @@ pip install -r requirements.txt
 ### Set up Vue stuff ###
 - Start powershell
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/
-- Run the following commands:
+- CD to djackets_vue/ and run the commands
 ```
 npm install -g @vue/cli
-cd djackets_vue
-npm install axios
-npm install bulma
+npm install
 ```
-(The first command installs vue/cli globally. The second changes directory to djackets_vue. The third and fourth install axios and bulma locally to the current folder)
+(The first command installs vue/cli globally. The second installs the dependencies listed in packages.json inside the djackets_vue folder.)
 
 ### Starting the Django server ###
 - Start powershell
