@@ -205,27 +205,71 @@
       submitForm() {
         this.errors = []
         
-        if (this.first_name === '') {
+        if (this.first_name === '')
+        {
           this.errors.push('The first name field is missing!')
         }
-        if (this.last_name === '') {
+        else if (/[%*!:;$]+/.test(this.first_name))
+        {
+          this.errors.push('First name field cannot contain: %*!:;$')
+        }
+
+        if (this.last_name === '')
+        {
           this.errors.push('The last name field is missing!')
         }
-        if (this.email === '') {
+        else if (/[%*!:;$]+/.test(this.last_name))
+        {
+          this.errors.push('Last name cannot contain: %*!:;$')
+        }
+
+        if (this.email === '')
+        {
           this.errors.push('The email field is missing!')
         }
-        if (this.phone === '') {
+        else if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.email)))
+        {
+          this.errors.push('Email is not in the correct format')
+        }
+
+        if (this.phone === '')
+        {
           this.errors.push('The phone field is missing!')
         }
-        if (this.address === '') {
+        else if (!(/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/.test(this.phone)))
+        {
+          this.errors.push('Phone number must only contain numbers and be of the format xxx-xxx-xxxx')
+        }
+
+        if (this.address === '')
+        {
           this.errors.push('The address field is missing!')
         }
-        if (this.zipcode === '') {
+
+        if (this.zipcode === '')
+        {
           this.errors.push('The zip code field is missing!')
         }
-        if (this.card === '' || this.cvv === '') {
-          this.errors.push('The card is invalid!')
+        else if (!(/^[0-9]{5}$/.test(this.zipcode)))
+        {
+          this.errors.push('Zip code must only contain numbers and be of the format xxxxx')
         }
+
+        if (this.card === '' || this.cvv === '')
+        {
+          this.errors.push('The card number fields are missing!')
+        }
+
+        if(!(/^[0-9]{16,19}/.test(this.card)))
+        {
+          this.errors.push('Card number must only contain numbers and be between 16-19 digits long')
+        }
+
+        if(!(/^[0-9]{3}/.test(this.cvv)))
+        {
+          this.errors.push('CVV must only contain numbers and be 3 digits long')
+        }
+
         if (!this.errors.length) {
           this.paymentHandler()
         }
