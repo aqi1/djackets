@@ -71,6 +71,7 @@ export default createStore({
       }
 
       localStorage.setItem('cart', JSON.stringify(state.cart))
+      localStorage.setItem('alreadyDiscounted', JSON.stringify(state.alreadyDiscounted))
     },
 
     setIsLoading(state, status){
@@ -91,6 +92,7 @@ export default createStore({
       state.cart = { items: [] }
       state.alreadyDiscounted = { items: [] }
       localStorage.setItem('cart', JSON.stringify(state.cart))
+      localStorage.setItem('alreadyDiscounted', JSON.stringify(state.alreadyDiscounted))
     }
   },
 

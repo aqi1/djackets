@@ -255,19 +255,22 @@
           this.errors.push('Zip code must only contain numbers and be of the format xxxxx')
         }
 
-        if (this.card === '' || this.cvv === '')
+        if (this.card === '')
         {
-          this.errors.push('The card number fields are missing!')
+          this.errors.push('The card number field is missing!')
         }
-
-        if(!(/^[0-9]{16,19}/.test(this.card)))
+        else if(!(/^[0-9]{16,19}/.test(this.card)))
         {
           this.errors.push('Card number must only contain numbers and be between 16-19 digits long')
         }
 
-        if(!(/^[0-9]{3}/.test(this.cvv)))
+        if(this.cvv === '')
         {
-          this.errors.push('CVV must only contain numbers and be 3 digits long')
+          this.errors.push('The CVV field is missing!')
+        }
+        else if(!(/^[0-9]{3}/.test(this.cvv)))
+        {
+          this.errors.push('CVV must only contain numbers and be three digits long')
         }
 
         if (!this.errors.length) {
