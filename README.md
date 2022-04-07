@@ -30,7 +30,7 @@ pip install -r requirements.txt
 npm install -g @vue/cli
 npm install
 ```
-(The first command installs vue/cli globally. The second installs the dependencies listed in packages.json inside the djackets_vue folder.)
+(The first command installs vue/cli globally. The second installs the dependencies listed in packages.json inside the djackets_vue folder to djackets_vue/nodes_modules)
 
 ### Starting the Django server ###
 - Start powershell
