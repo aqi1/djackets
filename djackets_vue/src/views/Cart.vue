@@ -55,6 +55,7 @@
     },
 
     mounted() {
+      document.title = 'Cart - ShoeMart'
       this.cart = this.$store.state.cart
       this.alreadyDiscounted = this.$store.state.alreadyDiscounted
     },
