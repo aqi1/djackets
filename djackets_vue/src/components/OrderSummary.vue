@@ -10,7 +10,7 @@
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Total</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +22,8 @@
                 </tr>
             </tbody>
         </table>
+
+        <h4 class="is-size-5">Paid Amount: ${{order.paid_amount}}</h4>
     </div>
 </template>
 

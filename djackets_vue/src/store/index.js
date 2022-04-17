@@ -52,14 +52,12 @@ export default createStore({
       localStorage.setItem('cart', JSON.stringify(state.cart))
     },
 
-    addToDiscountedList(state, item) {
-      const exists = state.alreadyDiscounted.items.filter(i => i.product.id === item.product.id)
+    updateCartFull(state, cart) {
+      state.cart = cart
+    },
 
-      if (!exists.length) {
-        state.alreadyDiscounted.items.push(item)
-      }
-
-      localStorage.setItem('alreadyDiscounted', JSON.stringify(state.alreadyDiscounted))
+    updateDiscountListFull(state, listOfDiscounts) {
+      state.alreadyDiscounted = listOfDiscounts
     },
 
     discountItem(state, item){
@@ -68,10 +66,10 @@ export default createStore({
 
       if (exists.length && !alreadyAppliedDiscount.length) {
         exists[0].product.price *= 0.8
+        state.alreadyDiscounted.items.push(item)
+        localStorage.setItem('alreadyDiscounted', JSON.stringify(state.alreadyDiscounted))
+        localStorage.setItem('cart', JSON.stringify(state.cart))
       }
-
-      localStorage.setItem('cart', JSON.stringify(state.cart))
-      localStorage.setItem('alreadyDiscounted', JSON.stringify(state.alreadyDiscounted))
     },
 
     setIsLoading(state, status){

@@ -62,7 +62,10 @@
     methods: {
       removeFromCart(item) {
         this.cart.items = this.cart.items.filter(i => i.product.id !== item.product.id)
+        this.$store.commit('updateCartFull', this.cart)
+
         this.alreadyDiscounted.items = this.alreadyDiscounted.items.filter(i => i.product.id !== item.product.id)
+        this.$store.commit('updateDiscountListFull', this.alreadyDiscounted)
       }
     },
 

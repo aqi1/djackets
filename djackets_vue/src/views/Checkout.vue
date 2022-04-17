@@ -192,9 +192,8 @@
           const item = this.cart.items[i]
           if(item.product.discount === this.discount)
           {
-            console.log("discount code match")
             this.$store.commit('discountItem', item)
-            this.$store.commit('addToDiscountedList', item)
+            this.cart = this.$store.state.cart
             break
           }
         }
@@ -310,6 +309,7 @@
             console.log(error)
           })
           this.$store.commit('setIsLoading', false)
+          this.cart = this.$store.state.cart
       },
 
 
