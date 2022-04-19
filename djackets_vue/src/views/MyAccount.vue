@@ -37,7 +37,7 @@
     },
 
     mounted() {
-      document.title = "My account - Black Dog Apparel"
+      document.title = "My Account - Black Dog Apparel"
       this.getMyOrders()
     },
 
