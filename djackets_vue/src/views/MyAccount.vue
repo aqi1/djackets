@@ -37,7 +37,7 @@
     },
 
     mounted() {
-      document.title = "My account - ShoeMart"
+      document.title = "My account - Black Dog Apparel"
       this.getMyOrders()
     },
 

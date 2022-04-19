@@ -1,15 +1,21 @@
 <template>
   <div class="home">
+    <!--
     <section class="hero is-medium is-dark mb-6">
       <div class="hero-body has-text-centered">
         <p class="title mb-6">
-          Welcome to ShoeMart
+          Welcome to Black Dog Apparel
         </p>
         <p class="subtitle">
-          BUY OUR SHOES
+          virtual clothes for the ideal you
         </p>
       </div>
     </section>
+    -->
+
+    <figure class="image is-3by1">
+      <img src='@/assets/splash.png'>
+    </figure> 
 
     <div class="columns is-multiline">
       <div class="column is-12">
@@ -39,7 +45,7 @@
 
     mounted(){
       this.getLatestProducts()
-      document.title = 'ShoeMart Home'
+      document.title = 'Home - Black Dog Apparel'
     },
 
     methods:{

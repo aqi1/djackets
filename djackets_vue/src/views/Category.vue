@@ -107,7 +107,7 @@
           .get(`/api/v1/products/${categorySlug}/`)
           .then(response => {
             this.category = response.data
-            document.title = this.category.name + ' - ShoeMart'
+            document.title = this.category.name + ' - Black Dog Apparel'
           })
           .catch(error => {
             console.log(error)

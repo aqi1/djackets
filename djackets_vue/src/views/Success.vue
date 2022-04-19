@@ -15,7 +15,7 @@
     name: 'Success',
 
     mounted() {
-      document.title = 'Success - ShoeMart'
+      document.title = 'Success - Black Dog Apparel'
     },
   }
 </script>

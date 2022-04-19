@@ -61,6 +61,10 @@
       }
     },
 
+    mounted() {
+      document.title = 'Sign Up - Black Dog Apparel'
+    },
+
     methods: {
       submitForm() {
         this.errors = []

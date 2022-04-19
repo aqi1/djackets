@@ -173,7 +173,7 @@
     },
 
     mounted() {
-      document.title = 'Checkout - ShoeMart'
+      document.title = 'Checkout - Black Dog Apparel'
       this.cart = this.$store.state.cart
     },
 

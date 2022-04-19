@@ -30,7 +30,7 @@
     },
 
     mounted() {
-      document.title = 'Search - ShoeMart'
+      document.title = 'Search - Black Dog Apparel'
 
       let uri = window.location.search.substring(1)
       let params = new URLSearchParams(uri)

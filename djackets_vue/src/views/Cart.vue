@@ -55,7 +55,7 @@
     },
 
     mounted() {
-      document.title = 'Cart - ShoeMart'
+      document.title = 'Cart - Black Dog Apparel'
       this.cart = this.$store.state.cart
       this.alreadyDiscounted = this.$store.state.alreadyDiscounted
     },

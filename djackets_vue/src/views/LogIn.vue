@@ -50,7 +50,7 @@
         },
 
         mounted() {
-            document.title = 'Log In - ShoeMart'
+            document.title = 'Log In - Black Dog Apparel'
         },
 
         methods: {
