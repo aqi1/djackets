@@ -13,9 +13,12 @@ from rest_framework.response import Response
 from .models import Order, OrderItem
 from .serializers import OrderSerializer, MyOrderSerializer
 
+from django.views.decorators.csrf import csrf_exempt
+
 @api_view(['POST'])
 @authentication_classes([authentication.TokenAuthentication])
 @permission_classes([permissions.IsAuthenticated])
+@csrf_exempt
 def checkout(request):
   serializer = OrderSerializer(data=request.data)
 

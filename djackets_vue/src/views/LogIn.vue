@@ -39,23 +39,33 @@
 
 <script>
     import axios from 'axios'
+    import Cookies from 'js-cookie'
+
+    axios.defaults.xsrfHeaderName = "X-CSRFToken";
+    axios.defaults.xsrfCookieName = 'csrftoken';
+    axios.defaults.withCredentials = true;
+
     export default {
         name: 'LogIn',
         data() {
             return {
                 username: '',
                 password: '',
-                errors: []
+                errors: [],
+                csrftoken: '',
             }
         },
 
         mounted() {
             document.title = 'Log In - Black Dog Apparel'
+            this.csrftoken = Cookies.get('csrftoken')
+            console.log(this.csrftoken)
         },
 
         methods: {
             async submitForm() {
                 axios.defaults.headers.common["Authorization"] = ""
+                axios.defaults.headers.common['X-CSRFTOKEN'] = this.csrftoken;
                 localStorage.removeItem("token")
                 const formData = {
                     username: this.username,
