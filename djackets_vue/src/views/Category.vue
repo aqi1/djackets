@@ -76,24 +76,20 @@
     },
 
     computed: {
-      /* SORTING
-      The order (asc/desc) is reversed between the name and params due to the order that
-      the <ProductBox> element is populated. Go by function name for correct order.
-      */
       sortByPriceAsc: function () {
-        return _.orderBy(this.category.products, 'price', 'desc')
-      },
-
-      sortByPriceDesc: function () {
         return _.orderBy(this.category.products, 'price', 'asc')
       },
 
+      sortByPriceDesc: function () {
+        return _.orderBy(this.category.products, 'price', 'desc')
+      },
+
       sortByStockAsc: function () {
-        return _.orderBy(this.category.products, 'stock', 'desc')
+        return _.orderBy(this.category.products, 'stock', 'asc')
       },
 
       sortByStockDesc: function () {
-        return _.orderBy(this.category.products, 'stock', 'asc')
+        return _.orderBy(this.category.products, 'stock', 'desc')
       }
     },
 
