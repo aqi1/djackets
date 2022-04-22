@@ -41,5 +41,6 @@ npm install
 - Start powershell again (new instance)
 - Activate the virtual environment by running "activate.ps1" in .venv/scripts/
 - Start the server running "npm run serve" in djackets_vue/
+- Make sure djackets_vue/src/main.js variable axios.defaults.baseURL is pointing to correct IP address (different on local vs. production)
 
 Go to localhost:8080 for the customer-facing web page or localhost:8000/admin for the administrative page (superuser login is admin//deanza)
